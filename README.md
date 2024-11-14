@@ -1,4 +1,4 @@
-# Step 1: Create Microfrontends and Host App with Vite
+## Step 1: Create Microfrontends and Host App with Vite
 ```bash
 npm create vite@latest microfrontend-1
 cd microfrontend-1
@@ -13,7 +13,7 @@ cd host-app
 npm install
 ```
 
-# Step 2: Install Required Plugins and Tools
+## Step 2: Install Required Plugins and Tools
 ```bash
 cd microfrontend-1
 npm install @originjs/vite-plugin-federation --save-dev
@@ -28,7 +28,7 @@ npm install @originjs/vite-plugin-federation --save-dev
 npm install concurrently --save-dev
 ```
 
-# Step 3: Configure vite.config.js for Module Federation
+## Step 3: Configure vite.config.js for Module Federation
 ### microfrontend-1 (vite.config.js):
 ```javascript
 import { defineConfig } from 'vite';
@@ -127,7 +127,7 @@ import App2 from "microfrontend2/App";
 </script>
 ```
 
-# Step 4: Modify package.json microfrontends (Dev Server not work)
+## Step 4: Modify package.json microfrontends (Dev Server not work)
 ### microfrontend-1 (package.json):
 ```javascript
   "scripts": {
@@ -145,7 +145,7 @@ import App2 from "microfrontend2/App";
   },
 ```
 
-# Step 5: Build and Preview
+## Step 5: Build and Preview
 ```bash
 cd microfrontend-1
 npm run build

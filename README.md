@@ -106,6 +106,27 @@ export default defineConfig({
 });
 ```
 
+### host-app (App.vue):
+```javascript
+<template>
+  <h1>MyApp</h1>
+
+  <div>Welcome to the micro frontends demo</div>
+
+  <div class="container">
+    <App1 />
+    <App2 />
+  </div>
+</template>
+
+<script setup>
+import { defineAsyncComponent } from "vue";
+
+import App1 from "microfrontend1/App";
+import App2 from "microfrontend2/App";
+</script>
+```
+
 # Step 4: Modify package.json microfrontends (Dev Server not work)
 ### microfrontend-1 (package.json):
 ```javascript
@@ -123,7 +144,9 @@ export default defineConfig({
     "preview": "concurrently \"vite build --watch\" \"vite preview --port 6060 --strictPort\""
   },
 ```
+
 # Step 5: Build and Preview
+```bash
 cd microfrontend-1
 npm run build
 npm run preview
@@ -135,3 +158,4 @@ npm run preview
 cd host-app
 npm run build
 npm run preview
+```

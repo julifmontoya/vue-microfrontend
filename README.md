@@ -11,8 +11,10 @@ npm install
 npm create vite@latest host-app
 cd host-app
 npm install
+```
 
 # Step 2: Install Required Plugins and Tools
+```bash
 cd microfrontend-1
 npm install @originjs/vite-plugin-federation --save-dev
 npm install concurrently --save-dev

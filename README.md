@@ -1,21 +1,21 @@
 # Step-by-Step Guide to Setting Up Microfrontends and Host App with Vite
 
 ## Step 1: Create Microfrontends and Host App
-1. Open Terminal #1 and create the first microfrontend:
+**1. Open Terminal #1 and create the first microfrontend:**
 ```bash
 npm create vite@latest microfrontend-1
 cd microfrontend-1
 npm install
 ```
 
-2. Open Terminal #2 and create the second microfrontend:
+**2. Open Terminal #2 and create the second microfrontend:**
 ```bash
 npm create vite@latest microfrontend-2
 cd microfrontend-2
 npm install
 ```
 
-3. Open Terminal #3 and create the host app:
+**3. Open Terminal #3 and create the host app:**
 ```bash
 npm create vite@latest host-app
 cd host-app
@@ -27,19 +27,19 @@ After completing this step, you will have three directories: microfrontend-1, mi
 ## Step 2: Install Required Plugins and Tools
 In each terminal, you’ll now install module federation plugin and concurrently (a tool for running multiple processes). Each terminal corresponds to a different part of the project. 
 
-1. Terminal #1 (microfrontend-1):
+**1. Terminal #1 (microfrontend-1):**
 ```bash
 npm install @originjs/vite-plugin-federation --save-dev
 npm install concurrently --save-dev
 ```
 
-2. Terminal #2 (microfrontend-2):
+**2. Terminal #2 (microfrontend-2):**
 ```bash
 npm install @originjs/vite-plugin-federation --save-dev
 npm install concurrently --save-dev
 ```
 
-3. Terminal #3 (host-app):
+**3. Terminal #3 (host-app):**
 ```bash
 cd host-app
 npm install @originjs/vite-plugin-federation --save-dev
@@ -168,21 +168,21 @@ Modify the package.json scripts for microfrontend-1 and microfrontend-2 to enabl
 ## Step 6: Build and Preview
 Each microfrontend and the host app needs to be built and then previewed
 
-1. Open a Terminal for microfrontend-1
+**1. Open a Terminal for microfrontend-1**
 ```bash
 cd microfrontend-1
 npm run build
 npm run preview
 ```
 
-2. Open Another Terminal for microfrontend-2
+**2. Open Another Terminal for microfrontend-2**
 ```bash
 cd microfrontend-2
 npm run build
 npm run preview
 ```
 
-3. Open a Third Terminal for the host app
+**3. Open a Third Terminal for the host app**
 ```bash
 cd host-app
 npm run build

@@ -1,4 +1,5 @@
 # Step 1: Create Microfrontends and Host App with Vite
+```bash
 npm create vite@latest microfrontend-1
 cd microfrontend-1
 npm install
@@ -23,6 +24,7 @@ npm install concurrently --save-dev
 cd host-app
 npm install @originjs/vite-plugin-federation --save-dev
 npm install concurrently --save-dev
+```
 
 # Step 3: Configure vite.config.js for Module Federation
 ### microfrontend-1 (vite.config.js):

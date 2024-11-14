@@ -25,11 +25,7 @@ npm install
 After completing this step, you will have three directories: microfrontend-1, microfrontend-2, and host-app, each set up with Vite and ready for configuration.
 
 ## Step 2: Install Required Plugins and Tools
-In each terminal, you’ll now install module federation plugin and concurrently (a tool for running multiple processes). Each terminal corresponds to a different part of the project. This setup method keeps everything organized and allows you to work on each part of the project independently:
-
-Terminal #1: microfrontend-1
-Terminal #2: microfrontend-2
-Terminal #3: host-app
+In each terminal, you’ll now install module federation plugin and concurrently (a tool for running multiple processes). Each terminal corresponds to a different part of the project. 
 
 1. Terminal #1 (microfrontend-1):
 ```bash

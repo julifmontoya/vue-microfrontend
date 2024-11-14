@@ -1,3 +1,5 @@
+# How to Set Up Microfrontends and Host App with Vite
+
 ## Step 1: Create Microfrontends and Host App with Vite
 ```bash
 npm create vite@latest microfrontend-1
@@ -14,6 +16,8 @@ npm install
 ```
 
 ## Step 2: Install Required Plugins and Tools
+For each microfrontend and host app, install the module federation plugin and concurrently for managing builds.
+
 ```bash
 cd microfrontend-1
 npm install @originjs/vite-plugin-federation --save-dev
@@ -29,6 +33,8 @@ npm install concurrently --save-dev
 ```
 
 ## Step 3: Configure vite.config.js for Module Federation
+In each app, configure vite.config.js for module federation to expose and consume components.
+
 ### microfrontend-1 (vite.config.js):
 ```javascript
 import { defineConfig } from 'vite';
@@ -105,14 +111,14 @@ export default defineConfig({
   },
 });
 ```
+## Step 4: Update App.vue in the Host App
+In host-app, import and display the components from the microfrontends.
 
 ### host-app (App.vue):
 ```javascript
 <template>
   <h1>MyApp</h1>
-
   <div>Welcome to the micro frontends demo</div>
-
   <div class="container">
     <App1 />
     <App2 />
@@ -120,14 +126,14 @@ export default defineConfig({
 </template>
 
 <script setup>
-import { defineAsyncComponent } from "vue";
-
 import App1 from "microfrontend1/App";
 import App2 from "microfrontend2/App";
 </script>
 ```
 
-## Step 4: Modify package.json microfrontends (Dev Server not work)
+## Step 5: Modify package.json Scripts for Microfrontends
+Modify the package.json scripts for microfrontend-1 and microfrontend-2 to enable concurrent build and preview.
+
 ### microfrontend-1 (package.json):
 ```javascript
   "scripts": {
@@ -145,7 +151,9 @@ import App2 from "microfrontend2/App";
   },
 ```
 
-## Step 5: Build and Preview
+## Step 6: Build and Preview
+Build and preview each microfrontend and the host app.
+
 ```bash
 cd microfrontend-1
 npm run build
